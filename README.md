@@ -19,13 +19,27 @@ The dataset can also be accessed through HuggingFace: https://huggingface.co/dat
 
 ## Dataset 
 
+Description:
+
 | Split  |  Tokens | Instances | Avg. Length |
 |--------|--------:|----------:|------------:|
 | Silver | 537,648 |    20,008 |       26.87 |
 | Gold   |  36,860 |       927 |       39.76 |
 
+Examples from the dataset:
+
+|       Source       |                                                                                         Instance                                                                                        |                                                          Translation                                                          |    Type of CS    |
+|:------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|:----------------:|
+|     HelduGazte     |                                    bihar zazpi terditan gora y yo me muerooooooo                                    |                                   tomorrow up at seven thirty and i'm going to die                                   | Intra-sentential |
+| BasqueParl | Por lo tanto, no tengo nada más que añadir. Eta eskerrik asko denoi akordio batera heldu garelako. | Therefore, I don't have anything else to add. And thank you everyone for having reached an agreement. | Inter-sentential |
+|      Covid-19      |                                Katxis!Veo a la tropa baja... Eutsi goiari!                              |                                     Heck! I see the spirits are low... Cheer up!                                     |    Emblematic    |
+
 ## Scripts
-The `scripts` folder contains all of the scripts used in the development of the dataset.
+Example usage:
+
+```
+python scripts/lid.py --input_file "file.tsv" --text_field "text_field"
+```
 
 ## Citation
 The [paper](https://arxiv.org/abs/2502.03188) that explains the dataset and experiments can be cited as follows:
